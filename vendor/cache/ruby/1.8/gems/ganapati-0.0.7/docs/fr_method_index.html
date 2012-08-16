@@ -1,0 +1,222 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+    Methods
+
+  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Methods</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div id="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000055">append (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000180">append (Ganapati::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000187">chmod (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000085">chmod (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000088">chown (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000188">chown (Ganapati::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000172">close (Ganapati::Client)</a><br />
+    <a href="classes/Ganapati/HFile.html#M000194">close (Ganapati::HFile)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000064">close (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000178">create (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000046">create (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000049">createFile (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000076">exists (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000184">exists? (Ganapati::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000175">get (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000094">getFileBlockLocations (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/FileUrl.html#M000169">hdfs? (Ganapati::FileUrl)</a><br />
+    <a href="classes/Ganapati/HFile.html#M000196">length (Ganapati::HFile)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000082">listStatus (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/FileUrl.html#M000170">local? (Ganapati::FileUrl)</a><br />
+    <a href="classes/Ganapati/Client.html#M000186">ls (Ganapati::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000183">mkdir (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000073">mkdirs (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000182">mv (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/MalformedInputException.html#M000097">new (ThriftHadoopFileSystem::MalformedInputException)</a><br />
+    <a href="classes/Ganapati/Client.html#M000171">new (Ganapati::Client)</a><br />
+    <a href="classes/Ganapati/FileUrl.html#M000167">new (Ganapati::FileUrl)</a><br />
+    <a href="classes/Ganapati/HFile.html#M000191">new (Ganapati::HFile)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/ThriftIOException.html#M000152">new (ThriftHadoopFileSystem::ThriftIOException)</a><br />
+    <a href="classes/Ganapati/Client.html#M000179">open (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000052">open (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000010">process_append (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000020">process_chmod (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000021">process_chown (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000013">process_close (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000007">process_create (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000008">process_createFile (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000017">process_exists (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000023">process_getFileBlockLocations (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000019">process_listStatus (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000016">process_mkdirs (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000009">process_open (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000012">process_read (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000015">process_rename (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000014">process_rm (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000005">process_setInactivityTimeoutPeriod (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000022">process_setReplication (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000006">process_shutdown (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000018">process_stat (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Processor.html#M000011">process_write (ThriftHadoopFileSystem::Processor)</a><br />
+    <a href="classes/Ganapati/Client.html#M000174">put (Ganapati::Client)</a><br />
+    <a href="classes/Ganapati/HFile.html#M000193">read (Ganapati::HFile)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000061">read (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000176">readchunks (Ganapati::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000177">readlines (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000057">recv_append (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000087">recv_chmod (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000090">recv_chown (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000066">recv_close (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000048">recv_create (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000051">recv_createFile (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000078">recv_exists (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000096">recv_getFileBlockLocations (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000084">recv_listStatus (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000075">recv_mkdirs (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000054">recv_open (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000063">recv_read (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000072">recv_rename (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000069">recv_rm (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000042">recv_setInactivityTimeoutPeriod (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000093">recv_setReplication (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000045">recv_shutdown (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000081">recv_stat (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000060">recv_write (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000070">rename (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000181">rm (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000067">rm (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000190">run (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000056">send_append (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000086">send_chmod (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000089">send_chown (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000065">send_close (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000047">send_create (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000050">send_createFile (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000077">send_exists (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000095">send_getFileBlockLocations (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000083">send_listStatus (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000074">send_mkdirs (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000053">send_open (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000062">send_read (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000071">send_rename (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000068">send_rm (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000041">send_setInactivityTimeoutPeriod (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000092">send_setReplication (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000044">send_shutdown (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000080">send_stat (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000059">send_write (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000040">setInactivityTimeoutPeriod (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000091">setReplication (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000189">set_replication (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000043">shutdown (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000173">shutdown (Ganapati::Client)</a><br />
+    <a href="classes/Ganapati/HFile.html#M000195">stat (Ganapati::HFile)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000079">stat (ThriftHadoopFileSystem::Client)</a><br />
+    <a href="classes/Ganapati/Client.html#M000185">stat (Ganapati::Client)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Chmod_args.html#M000148">struct_fields (ThriftHadoopFileSystem::Chmod_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Exists_result.html#M000001">struct_fields (ThriftHadoopFileSystem::Exists_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Mkdirs_result.html#M000108">struct_fields (ThriftHadoopFileSystem::Mkdirs_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Open_result.html#M000003">struct_fields (ThriftHadoopFileSystem::Open_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Mkdirs_args.html#M000110">struct_fields (ThriftHadoopFileSystem::Mkdirs_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/ListStatus_args.html#M000024">struct_fields (ThriftHadoopFileSystem::ListStatus_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Close_result.html#M000112">struct_fields (ThriftHadoopFileSystem::Close_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Stat_result.html#M000026">struct_fields (ThriftHadoopFileSystem::Stat_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Close_args.html#M000114">struct_fields (ThriftHadoopFileSystem::Close_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Rm_args.html#M000028">struct_fields (ThriftHadoopFileSystem::Rm_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/CreateFile_args.html#M000116">struct_fields (ThriftHadoopFileSystem::CreateFile_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Exists_args.html#M000030">struct_fields (ThriftHadoopFileSystem::Exists_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/BlockLocation.html#M000118">struct_fields (ThriftHadoopFileSystem::BlockLocation)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Append_result.html#M000032">struct_fields (ThriftHadoopFileSystem::Append_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/GetFileBlockLocations_args.html#M000120">struct_fields (ThriftHadoopFileSystem::GetFileBlockLocations_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Append_args.html#M000034">struct_fields (ThriftHadoopFileSystem::Append_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Chown_args.html#M000122">struct_fields (ThriftHadoopFileSystem::Chown_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Create_result.html#M000036">struct_fields (ThriftHadoopFileSystem::Create_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/SetInactivityTimeoutPeriod_args.html#M000124">struct_fields (ThriftHadoopFileSystem::SetInactivityTimeoutPeriod_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Create_args.html#M000038">struct_fields (ThriftHadoopFileSystem::Create_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/CreateFile_result.html#M000126">struct_fields (ThriftHadoopFileSystem::CreateFile_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/MalformedInputException.html#M000098">struct_fields (ThriftHadoopFileSystem::MalformedInputException)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Shutdown_args.html#M000128">struct_fields (ThriftHadoopFileSystem::Shutdown_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/ThriftIOException.html#M000153">struct_fields (ThriftHadoopFileSystem::ThriftIOException)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/GetFileBlockLocations_result.html#M000130">struct_fields (ThriftHadoopFileSystem::GetFileBlockLocations_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Rm_result.html#M000102">struct_fields (ThriftHadoopFileSystem::Rm_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Chown_result.html#M000132">struct_fields (ThriftHadoopFileSystem::Chown_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Open_args.html#M000150">struct_fields (ThriftHadoopFileSystem::Open_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Write_result.html#M000134">struct_fields (ThriftHadoopFileSystem::Write_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/FileStatus.html#M000104">struct_fields (ThriftHadoopFileSystem::FileStatus)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Write_args.html#M000136">struct_fields (ThriftHadoopFileSystem::Write_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Read_args.html#M000165">struct_fields (ThriftHadoopFileSystem::Read_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/SetInactivityTimeoutPeriod_result.html#M000138">struct_fields (ThriftHadoopFileSystem::SetInactivityTimeoutPeriod_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Read_result.html#M000163">struct_fields (ThriftHadoopFileSystem::Read_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Shutdown_result.html#M000140">struct_fields (ThriftHadoopFileSystem::Shutdown_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Rename_args.html#M000161">struct_fields (ThriftHadoopFileSystem::Rename_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/SetReplication_result.html#M000142">struct_fields (ThriftHadoopFileSystem::SetReplication_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Rename_result.html#M000159">struct_fields (ThriftHadoopFileSystem::Rename_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/SetReplication_args.html#M000144">struct_fields (ThriftHadoopFileSystem::SetReplication_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Stat_args.html#M000157">struct_fields (ThriftHadoopFileSystem::Stat_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Chmod_result.html#M000146">struct_fields (ThriftHadoopFileSystem::Chmod_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Pathname.html#M000155">struct_fields (ThriftHadoopFileSystem::Pathname)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/ThriftHandle.html#M000106">struct_fields (ThriftHadoopFileSystem::ThriftHandle)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/ListStatus_result.html#M000100">struct_fields (ThriftHadoopFileSystem::ListStatus_result)</a><br />
+    <a href="classes/Ganapati/FileUrl.html#M000168">to_s (Ganapati::FileUrl)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/FileStatus.html#M000105">validate (ThriftHadoopFileSystem::FileStatus)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Open_args.html#M000151">validate (ThriftHadoopFileSystem::Open_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Chmod_args.html#M000149">validate (ThriftHadoopFileSystem::Chmod_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/ThriftIOException.html#M000154">validate (ThriftHadoopFileSystem::ThriftIOException)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Chmod_result.html#M000147">validate (ThriftHadoopFileSystem::Chmod_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Pathname.html#M000156">validate (ThriftHadoopFileSystem::Pathname)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/SetReplication_args.html#M000145">validate (ThriftHadoopFileSystem::SetReplication_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Stat_args.html#M000158">validate (ThriftHadoopFileSystem::Stat_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/SetReplication_result.html#M000143">validate (ThriftHadoopFileSystem::SetReplication_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Rename_result.html#M000160">validate (ThriftHadoopFileSystem::Rename_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Shutdown_result.html#M000141">validate (ThriftHadoopFileSystem::Shutdown_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Rename_args.html#M000162">validate (ThriftHadoopFileSystem::Rename_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/SetInactivityTimeoutPeriod_result.html#M000139">validate (ThriftHadoopFileSystem::SetInactivityTimeoutPeriod_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Read_result.html#M000164">validate (ThriftHadoopFileSystem::Read_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Write_args.html#M000137">validate (ThriftHadoopFileSystem::Write_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Read_args.html#M000166">validate (ThriftHadoopFileSystem::Read_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Write_result.html#M000135">validate (ThriftHadoopFileSystem::Write_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Chown_result.html#M000133">validate (ThriftHadoopFileSystem::Chown_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Rm_result.html#M000103">validate (ThriftHadoopFileSystem::Rm_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/GetFileBlockLocations_result.html#M000131">validate (ThriftHadoopFileSystem::GetFileBlockLocations_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/ListStatus_result.html#M000101">validate (ThriftHadoopFileSystem::ListStatus_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Shutdown_args.html#M000129">validate (ThriftHadoopFileSystem::Shutdown_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/MalformedInputException.html#M000099">validate (ThriftHadoopFileSystem::MalformedInputException)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Mkdirs_result.html#M000109">validate (ThriftHadoopFileSystem::Mkdirs_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/ThriftHandle.html#M000107">validate (ThriftHadoopFileSystem::ThriftHandle)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Create_args.html#M000039">validate (ThriftHadoopFileSystem::Create_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/SetInactivityTimeoutPeriod_args.html#M000125">validate (ThriftHadoopFileSystem::SetInactivityTimeoutPeriod_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Create_result.html#M000037">validate (ThriftHadoopFileSystem::Create_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Chown_args.html#M000123">validate (ThriftHadoopFileSystem::Chown_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Append_args.html#M000035">validate (ThriftHadoopFileSystem::Append_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/GetFileBlockLocations_args.html#M000121">validate (ThriftHadoopFileSystem::GetFileBlockLocations_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Append_result.html#M000033">validate (ThriftHadoopFileSystem::Append_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/BlockLocation.html#M000119">validate (ThriftHadoopFileSystem::BlockLocation)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Exists_args.html#M000031">validate (ThriftHadoopFileSystem::Exists_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/CreateFile_args.html#M000117">validate (ThriftHadoopFileSystem::CreateFile_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Rm_args.html#M000029">validate (ThriftHadoopFileSystem::Rm_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Close_args.html#M000115">validate (ThriftHadoopFileSystem::Close_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Stat_result.html#M000027">validate (ThriftHadoopFileSystem::Stat_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Close_result.html#M000113">validate (ThriftHadoopFileSystem::Close_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/ListStatus_args.html#M000025">validate (ThriftHadoopFileSystem::ListStatus_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Mkdirs_args.html#M000111">validate (ThriftHadoopFileSystem::Mkdirs_args)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Exists_result.html#M000002">validate (ThriftHadoopFileSystem::Exists_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Open_result.html#M000004">validate (ThriftHadoopFileSystem::Open_result)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/CreateFile_result.html#M000127">validate (ThriftHadoopFileSystem::CreateFile_result)</a><br />
+    <a href="classes/Ganapati/HFile.html#M000192">write (Ganapati::HFile)</a><br />
+    <a href="classes/ThriftHadoopFileSystem/Client.html#M000058">write (ThriftHadoopFileSystem::Client)</a><br />
+  </div>
+</div>
+</body>
+</html>

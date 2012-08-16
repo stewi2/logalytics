@@ -1,0 +1,31 @@
+have_func: checking for strlcpy() in string.h... -------------------- no
+
+"gcc -o conftest -I/opt/local/include -I. -I/usr/local/rvm/rubies/ree-1.8.7-2011.03/lib/ruby/1.8/x86_64-linux -I.    -g -O2 -Wall -Werror conftest.c  -L. -L/usr/local/rvm/rubies/ree-1.8.7-2011.03/lib -Wl,-R/usr/local/rvm/rubies/ree-1.8.7-2011.03/lib -L.  -rdynamic -Wl,-export-dynamic     -lruby-static  -L/opt/local/lib -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘strlcpy’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include <string.h>
+2: 
+3: /*top*/
+4: int main() { return 0; }
+5: int t() { void ((*volatile p)()); p = (void ((*)()))strlcpy; return 0; }
+/* end */
+
+"gcc -o conftest -I/opt/local/include -I. -I/usr/local/rvm/rubies/ree-1.8.7-2011.03/lib/ruby/1.8/x86_64-linux -I.    -g -O2 -Wall -Werror conftest.c  -L. -L/usr/local/rvm/rubies/ree-1.8.7-2011.03/lib -Wl,-R/usr/local/rvm/rubies/ree-1.8.7-2011.03/lib -L.  -rdynamic -Wl,-export-dynamic     -lruby-static  -L/opt/local/lib -lrt -ldl -lcrypt -lm   -lc"
+cc1: warnings being treated as errors
+conftest.c: In function ‘t’:
+conftest.c:5: error: implicit declaration of function ‘strlcpy’
+checked program was:
+/* begin */
+1: #include <string.h>
+2: 
+3: /*top*/
+4: int main() { return 0; }
+5: int t() { strlcpy(); return 0; }
+/* end */
+
+--------------------
+

@@ -1,0 +1,10 @@
+Mon, 24 Oct 2011 11:08:25 -0400
+lib/ganapati/utils.rb	Thu, 31 Mar 2011 10:31:24 -0400
+lib/thrift/thrift_hadoop_file_system.rb	Wed, 19 Jan 2011 11:59:05 -0500
+lib/ganapati/client.rb	Mon, 24 Oct 2011 10:58:50 -0400
+lib/ganapati/version.rb	Mon, 24 Oct 2011 11:08:16 -0400
+lib/ganapati.rb	Mon, 24 Oct 2011 11:06:06 -0400
+lib/ganapati/hfile.rb	Wed, 19 Jan 2011 14:29:41 -0500
+README.rdoc	Thu, 31 Mar 2011 11:09:15 -0400
+lib/thrift/hadoopfs_constants.rb	Wed, 19 Jan 2011 11:59:05 -0500
+lib/thrift/hadoopfs_types.rb	Fri, 28 Jan 2011 13:17:00 -0500

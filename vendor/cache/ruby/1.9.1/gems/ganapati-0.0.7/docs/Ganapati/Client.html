@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Ganapati::Client</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/ganapati/client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ganapati/client.rb">lib/ganapati/client.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-run">::run</a></li>
+          
+          <li><a href="#method-i-append">#append</a></li>
+          
+          <li><a href="#method-i-chmod">#chmod</a></li>
+          
+          <li><a href="#method-i-chown">#chown</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-create">#create</a></li>
+          
+          <li><a href="#method-i-exists-3F">#exists?</a></li>
+          
+          <li><a href="#method-i-get">#get</a></li>
+          
+          <li><a href="#method-i-ls">#ls</a></li>
+          
+          <li><a href="#method-i-mkdir">#mkdir</a></li>
+          
+          <li><a href="#method-i-mv">#mv</a></li>
+          
+          <li><a href="#method-i-open">#open</a></li>
+          
+          <li><a href="#method-i-put">#put</a></li>
+          
+          <li><a href="#method-i-readchunks">#readchunks</a></li>
+          
+          <li><a href="#method-i-readlines">#readlines</a></li>
+          
+          <li><a href="#method-i-rm">#rm</a></li>
+          
+          <li><a href="#method-i-set_replication">#set_replication</a></li>
+          
+          <li><a href="#method-i-shutdown">#shutdown</a></li>
+          
+          <li><a href="#method-i-stat">#stat</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../ThriftHadoopFileSystem.html">ThriftHadoopFileSystem</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Append_args.html">ThriftHadoopFileSystem::Append_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Append_result.html">ThriftHadoopFileSystem::Append_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/BlockLocation.html">ThriftHadoopFileSystem::BlockLocation</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Chmod_args.html">ThriftHadoopFileSystem::Chmod_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Chmod_result.html">ThriftHadoopFileSystem::Chmod_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Chown_args.html">ThriftHadoopFileSystem::Chown_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Chown_result.html">ThriftHadoopFileSystem::Chown_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Client.html">ThriftHadoopFileSystem::Client</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Close_args.html">ThriftHadoopFileSystem::Close_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Close_result.html">ThriftHadoopFileSystem::Close_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/CreateFile_args.html">ThriftHadoopFileSystem::CreateFile_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/CreateFile_result.html">ThriftHadoopFileSystem::CreateFile_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Create_args.html">ThriftHadoopFileSystem::Create_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Create_result.html">ThriftHadoopFileSystem::Create_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Exists_args.html">ThriftHadoopFileSystem::Exists_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Exists_result.html">ThriftHadoopFileSystem::Exists_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/FileStatus.html">ThriftHadoopFileSystem::FileStatus</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/GetFileBlockLocations_args.html">ThriftHadoopFileSystem::GetFileBlockLocations_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/GetFileBlockLocations_result.html">ThriftHadoopFileSystem::GetFileBlockLocations_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/ListStatus_args.html">ThriftHadoopFileSystem::ListStatus_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/ListStatus_result.html">ThriftHadoopFileSystem::ListStatus_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/MalformedInputException.html">ThriftHadoopFileSystem::MalformedInputException</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Mkdirs_args.html">ThriftHadoopFileSystem::Mkdirs_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Mkdirs_result.html">ThriftHadoopFileSystem::Mkdirs_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Open_args.html">ThriftHadoopFileSystem::Open_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Open_result.html">ThriftHadoopFileSystem::Open_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Pathname.html">ThriftHadoopFileSystem::Pathname</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Processor.html">ThriftHadoopFileSystem::Processor</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Read_args.html">ThriftHadoopFileSystem::Read_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Read_result.html">ThriftHadoopFileSystem::Read_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Rename_args.html">ThriftHadoopFileSystem::Rename_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Rename_result.html">ThriftHadoopFileSystem::Rename_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Rm_args.html">ThriftHadoopFileSystem::Rm_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Rm_result.html">ThriftHadoopFileSystem::Rm_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/SetInactivityTimeoutPeriod_args.html">ThriftHadoopFileSystem::SetInactivityTimeoutPeriod_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/SetInactivityTimeoutPeriod_result.html">ThriftHadoopFileSystem::SetInactivityTimeoutPeriod_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/SetReplication_args.html">ThriftHadoopFileSystem::SetReplication_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/SetReplication_result.html">ThriftHadoopFileSystem::SetReplication_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Shutdown_args.html">ThriftHadoopFileSystem::Shutdown_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Shutdown_result.html">ThriftHadoopFileSystem::Shutdown_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Stat_args.html">ThriftHadoopFileSystem::Stat_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Stat_result.html">ThriftHadoopFileSystem::Stat_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/ThriftHandle.html">ThriftHadoopFileSystem::ThriftHandle</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/ThriftIOException.html">ThriftHadoopFileSystem::ThriftIOException</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Write_args.html">ThriftHadoopFileSystem::Write_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Write_result.html">ThriftHadoopFileSystem::Write_result</a></li>
+        
+          <li><a href="../Ganapati.html">Ganapati</a></li>
+        
+          <li><a href="../Ganapati/Client.html">Ganapati::Client</a></li>
+        
+          <li><a href="../Ganapati/FileUrl.html">Ganapati::FileUrl</a></li>
+        
+          <li><a href="../Ganapati/HFile.html">Ganapati::HFile</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Ganapati::Client</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(server, port, timeout=60)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">port</span>, <span class="ruby-identifier">timeout</span>=<span class="ruby-value">60</span>)
+  <span class="ruby-identifier">socket</span> = <span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">Socket</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">port</span>)
+  <span class="ruby-ivar">@transport</span> = <span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">BufferedTransport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">socket</span>)
+  <span class="ruby-ivar">@transport</span>.<span class="ruby-identifier">open</span>
+  <span class="ruby-identifier">protocol</span> = <span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">BinaryProtocol</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@transport</span>)
+  <span class="ruby-ivar">@client</span> = <span class="ruby-constant">ThriftHadoopFileSystem</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">protocol</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">setInactivityTimeoutPeriod</span>(<span class="ruby-identifier">timeout</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-c-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">(server, port)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="run-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">port</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">port</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">yield</span> <span class="ruby-identifier">c</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="append-method" class="method-detail ">
+          <a name="method-i-append"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">append</span><span
+              class="method-args">(path, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>for appending</p>
+            
+
+            
+            <div class="method-source-code" id="append-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append</span>(<span class="ruby-identifier">path</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">file_handle</span> <span class="ruby-value">:append</span>, <span class="ruby-identifier">path</span>, &amp;<span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- append-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- append-method -->
+
+      
+        <div id="chmod-method" class="method-detail ">
+          <a name="method-i-chmod"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">chmod</span><span
+              class="method-args">(path, mode)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="chmod-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">chmod</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">mode</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">chmod</span> <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">path</span>), <span class="ruby-identifier">mode</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- chmod-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- chmod-method -->
+
+      
+        <div id="chown-method" class="method-detail ">
+          <a name="method-i-chown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">chown</span><span
+              class="method-args">(path, owner, group)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="chown-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">chown</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">owner</span>, <span class="ruby-identifier">group</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">chown</span> <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">path</span>), <span class="ruby-identifier">owner</span>, <span class="ruby-identifier">group</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- chown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- chown-method -->
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@transport</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="create-method" class="method-detail ">
+          <a name="method-i-create"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create</span><span
+              class="method-args">(path, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>for writing to a new file</p>
+            
+
+            
+            <div class="method-source-code" id="create-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>(<span class="ruby-identifier">path</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">file_handle</span> <span class="ruby-value">:create</span>, <span class="ruby-identifier">path</span>, &amp;<span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create-method -->
+
+      
+        <div id="exists-3F-method" class="method-detail ">
+          <a name="method-i-exists-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exists?</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="exists-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">exists</span> <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exists-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exists-3F-method -->
+
+      
+        <div id="get-method" class="method-detail ">
+          <a name="method-i-get"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get</span><span
+              class="method-args">(remotepath, destpath)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>copy remote file to local</p>
+            
+
+            
+            <div class="method-source-code" id="get-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">remotepath</span>, <span class="ruby-identifier">destpath</span>)
+  <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">destpath</span>, <span class="ruby-string">'w'</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">dest</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">readchunks</span>(<span class="ruby-identifier">remotepath</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">chunk</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">dest</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">chunk</span>
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get-method -->
+
+      
+        <div id="ls-method" class="method-detail ">
+          <a name="method-i-ls"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ls</span><span
+              class="method-args">(path, details=false, recursive=false)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ls-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ls</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">details</span>=<span class="ruby-keyword">false</span>, <span class="ruby-identifier">recursive</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">statuses</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">listStatus</span> <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">paths</span> = (<span class="ruby-identifier">details</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">statuses</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">statuses</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">path</span> }
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">paths</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">recursive</span>
+  <span class="ruby-identifier">paths</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">statuses</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">isdir</span> }.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ls</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">details</span>, <span class="ruby-identifier">recursive</span>) }.<span class="ruby-identifier">flatten</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ls-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ls-method -->
+
+      
+        <div id="mkdir-method" class="method-detail ">
+          <a name="method-i-mkdir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mkdir</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="mkdir-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mkdir</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">mkdirs</span> <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mkdir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mkdir-method -->
+
+      
+        <div id="mv-method" class="method-detail ">
+          <a name="method-i-mv"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mv</span><span
+              class="method-args">(source, dest)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="mv-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mv</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">dest</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">rename</span> <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">source</span>), <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">dest</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mv-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mv-method -->
+
+      
+        <div id="open-method" class="method-detail ">
+          <a name="method-i-open"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open</span><span
+              class="method-args">(path, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>for reading</p>
+            
+
+            
+            <div class="method-source-code" id="open-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">file_handle</span> <span class="ruby-value">:open</span>, <span class="ruby-identifier">path</span>, &amp;<span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- open-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open-method -->
+
+      
+        <div id="put-method" class="method-detail ">
+          <a name="method-i-put"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">put</span><span
+              class="method-args">(localpath, destpath)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>copy local file to remote</p>
+            
+
+            
+            <div class="method-source-code" id="put-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">localpath</span>, <span class="ruby-identifier">destpath</span>)
+  <span class="ruby-identifier">create</span>(<span class="ruby-identifier">destpath</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">dest</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">localpath</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment"># read 1 MB at a time</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-identifier">record</span> = <span class="ruby-identifier">source</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">1048576</span>)
+        <span class="ruby-identifier">dest</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">record</span>)
+      <span class="ruby-keyword">end</span>
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- put-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- put-method -->
+
+      
+        <div id="readchunks-method" class="method-detail ">
+          <a name="method-i-readchunks"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">readchunks</span><span
+              class="method-args">(path, chunksize=1048576)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>yeild chunksize of path one chunk at a time</p>
+            
+
+            
+            <div class="method-source-code" id="readchunks-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">readchunks</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">chunksize</span>=<span class="ruby-value">1048576</span>)
+  <span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">size</span> = <span class="ruby-identifier">source</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">index</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">size</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">chunksize</span>)
+      <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">chunksize</span>
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- readchunks-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- readchunks-method -->
+
+      
+        <div id="readlines-method" class="method-detail ">
+          <a name="method-i-readlines"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">readlines</span><span
+              class="method-args">(path, sep="\n")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="readlines-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">readlines</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">sep</span>=<span class="ruby-string">&quot;\n&quot;</span>)
+  <span class="ruby-identifier">buffer</span> = <span class="ruby-string">&quot;&quot;</span>
+
+  <span class="ruby-identifier">readchunks</span>(<span class="ruby-identifier">path</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">chunk</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">chunk</span>
+
+    <span class="ruby-comment"># partitions[1] will be empty if sep does not exist in the string</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">partitions</span> = <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">partition</span>(<span class="ruby-identifier">sep</span>) <span class="ruby-keyword">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">partitions</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">partitions</span>.<span class="ruby-identifier">first</span>
+      <span class="ruby-identifier">buffer</span> = <span class="ruby-identifier">partitions</span>.<span class="ruby-identifier">last</span>
+    <span class="ruby-keyword">end</span>
+  }
+
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">buffer</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- readlines-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- readlines-method -->
+
+      
+        <div id="rm-method" class="method-detail ">
+          <a name="method-i-rm"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rm</span><span
+              class="method-args">(path, recursive=false)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="rm-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rm</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">recursive</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">rm</span> <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">path</span>), <span class="ruby-identifier">recursive</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rm-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rm-method -->
+
+      
+        <div id="set_replication-method" class="method-detail ">
+          <a name="method-i-set_replication"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_replication</span><span
+              class="method-args">(path, level)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="set_replication-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_replication</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">level</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">setReplication</span> <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">path</span>), <span class="ruby-identifier">level</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_replication-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_replication-method -->
+
+      
+        <div id="shutdown-method" class="method-detail ">
+          <a name="method-i-shutdown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">shutdown</span><span
+              class="method-args">(status=0)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>shutdown the thrift server</p>
+            
+
+            
+            <div class="method-source-code" id="shutdown-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shutdown</span>(<span class="ruby-identifier">status</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">shutdown</span> <span class="ruby-identifier">status</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- shutdown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- shutdown-method -->
+
+      
+        <div id="stat-method" class="method-detail ">
+          <a name="method-i-stat"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stat</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="stat-source">
+<pre>
+<span class="ruby-comment"># File lib/ganapati/client.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stat</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">stat</span> <span class="ruby-identifier">pname</span>(<span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stat-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stat-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

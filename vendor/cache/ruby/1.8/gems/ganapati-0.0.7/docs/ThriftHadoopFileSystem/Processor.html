@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: ThriftHadoopFileSystem::Processor</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/thrift/thrift_hadoop_file_system_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/thrift/thrift_hadoop_file_system.rb">lib/thrift/thrift_hadoop_file_system.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-process_append">#process_append</a></li>
+          
+          <li><a href="#method-i-process_chmod">#process_chmod</a></li>
+          
+          <li><a href="#method-i-process_chown">#process_chown</a></li>
+          
+          <li><a href="#method-i-process_close">#process_close</a></li>
+          
+          <li><a href="#method-i-process_create">#process_create</a></li>
+          
+          <li><a href="#method-i-process_createFile">#process_createFile</a></li>
+          
+          <li><a href="#method-i-process_exists">#process_exists</a></li>
+          
+          <li><a href="#method-i-process_getFileBlockLocations">#process_getFileBlockLocations</a></li>
+          
+          <li><a href="#method-i-process_listStatus">#process_listStatus</a></li>
+          
+          <li><a href="#method-i-process_mkdirs">#process_mkdirs</a></li>
+          
+          <li><a href="#method-i-process_open">#process_open</a></li>
+          
+          <li><a href="#method-i-process_read">#process_read</a></li>
+          
+          <li><a href="#method-i-process_rename">#process_rename</a></li>
+          
+          <li><a href="#method-i-process_rm">#process_rm</a></li>
+          
+          <li><a href="#method-i-process_setInactivityTimeoutPeriod">#process_setInactivityTimeoutPeriod</a></li>
+          
+          <li><a href="#method-i-process_setReplication">#process_setReplication</a></li>
+          
+          <li><a href="#method-i-process_shutdown">#process_shutdown</a></li>
+          
+          <li><a href="#method-i-process_stat">#process_stat</a></li>
+          
+          <li><a href="#method-i-process_write">#process_write</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><span class="include">::Thrift::Processor</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../ThriftHadoopFileSystem.html">ThriftHadoopFileSystem</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Append_args.html">ThriftHadoopFileSystem::Append_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Append_result.html">ThriftHadoopFileSystem::Append_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/BlockLocation.html">ThriftHadoopFileSystem::BlockLocation</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Chmod_args.html">ThriftHadoopFileSystem::Chmod_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Chmod_result.html">ThriftHadoopFileSystem::Chmod_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Chown_args.html">ThriftHadoopFileSystem::Chown_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Chown_result.html">ThriftHadoopFileSystem::Chown_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Client.html">ThriftHadoopFileSystem::Client</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Close_args.html">ThriftHadoopFileSystem::Close_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Close_result.html">ThriftHadoopFileSystem::Close_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/CreateFile_args.html">ThriftHadoopFileSystem::CreateFile_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/CreateFile_result.html">ThriftHadoopFileSystem::CreateFile_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Create_args.html">ThriftHadoopFileSystem::Create_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Create_result.html">ThriftHadoopFileSystem::Create_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Exists_args.html">ThriftHadoopFileSystem::Exists_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Exists_result.html">ThriftHadoopFileSystem::Exists_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/FileStatus.html">ThriftHadoopFileSystem::FileStatus</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/GetFileBlockLocations_args.html">ThriftHadoopFileSystem::GetFileBlockLocations_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/GetFileBlockLocations_result.html">ThriftHadoopFileSystem::GetFileBlockLocations_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/ListStatus_args.html">ThriftHadoopFileSystem::ListStatus_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/ListStatus_result.html">ThriftHadoopFileSystem::ListStatus_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/MalformedInputException.html">ThriftHadoopFileSystem::MalformedInputException</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Mkdirs_args.html">ThriftHadoopFileSystem::Mkdirs_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Mkdirs_result.html">ThriftHadoopFileSystem::Mkdirs_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Open_args.html">ThriftHadoopFileSystem::Open_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Open_result.html">ThriftHadoopFileSystem::Open_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Pathname.html">ThriftHadoopFileSystem::Pathname</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Processor.html">ThriftHadoopFileSystem::Processor</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Read_args.html">ThriftHadoopFileSystem::Read_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Read_result.html">ThriftHadoopFileSystem::Read_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Rename_args.html">ThriftHadoopFileSystem::Rename_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Rename_result.html">ThriftHadoopFileSystem::Rename_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Rm_args.html">ThriftHadoopFileSystem::Rm_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Rm_result.html">ThriftHadoopFileSystem::Rm_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/SetInactivityTimeoutPeriod_args.html">ThriftHadoopFileSystem::SetInactivityTimeoutPeriod_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/SetInactivityTimeoutPeriod_result.html">ThriftHadoopFileSystem::SetInactivityTimeoutPeriod_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/SetReplication_args.html">ThriftHadoopFileSystem::SetReplication_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/SetReplication_result.html">ThriftHadoopFileSystem::SetReplication_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Shutdown_args.html">ThriftHadoopFileSystem::Shutdown_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Shutdown_result.html">ThriftHadoopFileSystem::Shutdown_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Stat_args.html">ThriftHadoopFileSystem::Stat_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Stat_result.html">ThriftHadoopFileSystem::Stat_result</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/ThriftHandle.html">ThriftHadoopFileSystem::ThriftHandle</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/ThriftIOException.html">ThriftHadoopFileSystem::ThriftIOException</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Write_args.html">ThriftHadoopFileSystem::Write_args</a></li>
+        
+          <li><a href="../ThriftHadoopFileSystem/Write_result.html">ThriftHadoopFileSystem::Write_result</a></li>
+        
+          <li><a href="../Ganapati.html">Ganapati</a></li>
+        
+          <li><a href="../Ganapati/Client.html">Ganapati::Client</a></li>
+        
+          <li><a href="../Ganapati/FileUrl.html">Ganapati::FileUrl</a></li>
+        
+          <li><a href="../Ganapati/HFile.html">Ganapati::HFile</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">ThriftHadoopFileSystem::Processor</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="process_append-method" class="method-detail ">
+          <a name="method-i-process_append"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_append</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_append-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_append</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Append_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Append_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">append</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'append'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_append-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_append-method -->
+
+      
+        <div id="process_chmod-method" class="method-detail ">
+          <a name="method-i-process_chmod"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_chmod</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_chmod-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 473</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_chmod</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Chmod_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Chmod_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">mode</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'chmod'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_chmod-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_chmod-method -->
+
+      
+        <div id="process_chown-method" class="method-detail ">
+          <a name="method-i-process_chown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_chown</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_chown-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 484</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_chown</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Chown_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Chown_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">chown</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">owner</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">group</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'chown'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_chown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_chown-method -->
+
+      
+        <div id="process_close-method" class="method-detail ">
+          <a name="method-i-process_close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_close</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_close-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 396</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_close</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Close_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Close_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">close</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">out</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'close'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_close-method -->
+
+      
+        <div id="process_create-method" class="method-detail ">
+          <a name="method-i-process_create"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_create</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_create-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 330</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_create</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Create_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Create_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'create'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_create-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_create-method -->
+
+      
+        <div id="process_createFile-method" class="method-detail ">
+          <a name="method-i-process_createFile"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_createFile</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_createFile-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_createFile</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">CreateFile_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">CreateFile_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">createFile</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">overwrite</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">bufferSize</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">block_replication</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">blocksize</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'createFile'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_createFile-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_createFile-method -->
+
+      
+        <div id="process_exists-method" class="method-detail ">
+          <a name="method-i-process_exists"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_exists</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_exists-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 440</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_exists</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Exists_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Exists_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">exists</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'exists'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_exists-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_exists-method -->
+
+      
+        <div id="process_getFileBlockLocations-method" class="method-detail ">
+          <a name="method-i-process_getFileBlockLocations"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_getFileBlockLocations</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_getFileBlockLocations-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 506</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_getFileBlockLocations</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">GetFileBlockLocations_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">GetFileBlockLocations_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">getFileBlockLocations</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">start</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'getFileBlockLocations'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_getFileBlockLocations-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_getFileBlockLocations-method -->
+
+      
+        <div id="process_listStatus-method" class="method-detail ">
+          <a name="method-i-process_listStatus"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_listStatus</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_listStatus-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 462</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_listStatus</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">ListStatus_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">ListStatus_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">listStatus</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'listStatus'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_listStatus-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_listStatus-method -->
+
+      
+        <div id="process_mkdirs-method" class="method-detail ">
+          <a name="method-i-process_mkdirs"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_mkdirs</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_mkdirs-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 429</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_mkdirs</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Mkdirs_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Mkdirs_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">mkdirs</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'mkdirs'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_mkdirs-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_mkdirs-method -->
+
+      
+        <div id="process_open-method" class="method-detail ">
+          <a name="method-i-process_open"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_open</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_open-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 352</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_open</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Open_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Open_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'open'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_open-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_open-method -->
+
+      
+        <div id="process_read-method" class="method-detail ">
+          <a name="method-i-process_read"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_read</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_read-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 385</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_read</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Read_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Read_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">offset</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'read'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_read-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_read-method -->
+
+      
+        <div id="process_rename-method" class="method-detail ">
+          <a name="method-i-process_rename"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_rename</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_rename-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 418</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_rename</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Rename_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Rename_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">rename</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">dest</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'rename'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_rename-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_rename-method -->
+
+      
+        <div id="process_rm-method" class="method-detail ">
+          <a name="method-i-process_rm"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_rm</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_rm-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 407</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_rm</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Rm_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Rm_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">rm</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">recursive</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'rm'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_rm-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_rm-method -->
+
+      
+        <div id="process_setInactivityTimeoutPeriod-method" class="method-detail ">
+          <a name="method-i-process_setInactivityTimeoutPeriod"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_setInactivityTimeoutPeriod</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_setInactivityTimeoutPeriod-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 316</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_setInactivityTimeoutPeriod</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">SetInactivityTimeoutPeriod_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">SetInactivityTimeoutPeriod_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">setInactivityTimeoutPeriod</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">periodInSeconds</span>)
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'setInactivityTimeoutPeriod'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_setInactivityTimeoutPeriod-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_setInactivityTimeoutPeriod-method -->
+
+      
+        <div id="process_setReplication-method" class="method-detail ">
+          <a name="method-i-process_setReplication"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_setReplication</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_setReplication-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 495</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_setReplication</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">SetReplication_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">SetReplication_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">setReplication</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">replication</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'setReplication'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_setReplication-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_setReplication-method -->
+
+      
+        <div id="process_shutdown-method" class="method-detail ">
+          <a name="method-i-process_shutdown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_shutdown</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_shutdown-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_shutdown</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Shutdown_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Shutdown_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">shutdown</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">status</span>)
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'shutdown'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_shutdown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_shutdown-method -->
+
+      
+        <div id="process_stat-method" class="method-detail ">
+          <a name="method-i-process_stat"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_stat</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_stat-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 451</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_stat</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Stat_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Stat_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">stat</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'stat'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_stat-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_stat-method -->
+
+      
+        <div id="process_write-method" class="method-detail ">
+          <a name="method-i-process_write"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_write</span><span
+              class="method-args">(seqid, iprot, oprot)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_write-source">
+<pre>
+<span class="ruby-comment"># File lib/thrift/thrift_hadoop_file_system.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_write</span>(<span class="ruby-identifier">seqid</span>, <span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">oprot</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">read_args</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-constant">Write_args</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">Write_result</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> = <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">args</span>.<span class="ruby-identifier">data</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ThriftIOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ouch</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> = <span class="ruby-identifier">ouch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">write_result</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">oprot</span>, <span class="ruby-string">'write'</span>, <span class="ruby-identifier">seqid</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_write-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_write-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

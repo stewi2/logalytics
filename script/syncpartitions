@@ -1,0 +1,65 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'httpclient'
+require 'json'
+require 'rbhive'
+
+client = HTTPClient.new()
+client.send_timeout=0
+client.receive_timeout=0 
+
+options = {}
+options[:host] = 'dev-hadoop01'
+options[:port] = 14000
+options[:user] = 'flume'
+options[:client] = client
+
+table = ARGV[0]
+
+def resolve(path,options)
+
+  puts "Resolving #{path}"
+  partitions = []
+
+  resp = JSON.parse(options[:client].get("http://#{options[:host]}:#{options[:port]}/webhdfs/v1/flume/#{path}", :query=>{'user.name'=>options[:user], :op=>'LISTSTATUS'}).body)
+
+  resp['FileStatuses']['FileStatus'].each do |status|
+    name = status['pathSuffix']  
+    if status['type']=='DIRECTORY' && name=~/.+=.+/ then
+      key,value = name.split('=')
+      subparts = resolve("#{path}/#{name}",options)
+      if !subparts.empty? then
+        subparts.each {|part| partitions << {key=>value}.merge(part)}
+      else
+        partitions<<{key=>value}
+      end
+    end
+  end 
+
+  return partitions || [{}]
+end
+
+hive_partitions = []
+RBHive.connect('dev-hadoop01',10000) do |db|
+
+  db.fetch(%[
+    SHOW PARTITIONS #{table}
+  ]).each do |p|
+    partition = {}
+    parts = p[:partition].split("/")
+    parts.each {|part| key,value = part.split("="); partition[key]=value}
+    hive_partitions << partition
+  end
+  
+  hdfs_partitions = resolve(table,options)
+  missing = hdfs_partitions-hive_partitions
+  
+  puts "Adding #{missing.size} missing partitions to Hive"
+  
+  missing.each do |partition|
+    db.execute %[
+      ALTER TABLE #{table} ADD PARTITION (#{partition.map {|k,v| k+'=\''+v+'\''}.join(',')})
+    ]
+  end
+end

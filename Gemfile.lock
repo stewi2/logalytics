@@ -1,0 +1,17 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    httpclient (2.2.5)
+    json (1.7.4)
+    rbhive (0.2.94)
+      json
+      thrift (>= 0.4.0)
+    thrift (0.8.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  httpclient (~> 2.2.5)
+  json (~> 1.7.4)
+  rbhive

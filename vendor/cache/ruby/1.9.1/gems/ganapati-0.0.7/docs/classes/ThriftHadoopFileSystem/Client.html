@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: ThriftHadoopFileSystem::Client</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">ThriftHadoopFileSystem::Client</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/thrift/thrift_hadoop_file_system_rb.html">
+                lib/thrift/thrift_hadoop_file_system.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000055">append</a>&nbsp;&nbsp;
+      <a href="#M000085">chmod</a>&nbsp;&nbsp;
+      <a href="#M000088">chown</a>&nbsp;&nbsp;
+      <a href="#M000064">close</a>&nbsp;&nbsp;
+      <a href="#M000046">create</a>&nbsp;&nbsp;
+      <a href="#M000049">createFile</a>&nbsp;&nbsp;
+      <a href="#M000076">exists</a>&nbsp;&nbsp;
+      <a href="#M000094">getFileBlockLocations</a>&nbsp;&nbsp;
+      <a href="#M000082">listStatus</a>&nbsp;&nbsp;
+      <a href="#M000073">mkdirs</a>&nbsp;&nbsp;
+      <a href="#M000052">open</a>&nbsp;&nbsp;
+      <a href="#M000061">read</a>&nbsp;&nbsp;
+      <a href="#M000057">recv_append</a>&nbsp;&nbsp;
+      <a href="#M000087">recv_chmod</a>&nbsp;&nbsp;
+      <a href="#M000090">recv_chown</a>&nbsp;&nbsp;
+      <a href="#M000066">recv_close</a>&nbsp;&nbsp;
+      <a href="#M000048">recv_create</a>&nbsp;&nbsp;
+      <a href="#M000051">recv_createFile</a>&nbsp;&nbsp;
+      <a href="#M000078">recv_exists</a>&nbsp;&nbsp;
+      <a href="#M000096">recv_getFileBlockLocations</a>&nbsp;&nbsp;
+      <a href="#M000084">recv_listStatus</a>&nbsp;&nbsp;
+      <a href="#M000075">recv_mkdirs</a>&nbsp;&nbsp;
+      <a href="#M000054">recv_open</a>&nbsp;&nbsp;
+      <a href="#M000063">recv_read</a>&nbsp;&nbsp;
+      <a href="#M000072">recv_rename</a>&nbsp;&nbsp;
+      <a href="#M000069">recv_rm</a>&nbsp;&nbsp;
+      <a href="#M000042">recv_setInactivityTimeoutPeriod</a>&nbsp;&nbsp;
+      <a href="#M000093">recv_setReplication</a>&nbsp;&nbsp;
+      <a href="#M000045">recv_shutdown</a>&nbsp;&nbsp;
+      <a href="#M000081">recv_stat</a>&nbsp;&nbsp;
+      <a href="#M000060">recv_write</a>&nbsp;&nbsp;
+      <a href="#M000070">rename</a>&nbsp;&nbsp;
+      <a href="#M000067">rm</a>&nbsp;&nbsp;
+      <a href="#M000056">send_append</a>&nbsp;&nbsp;
+      <a href="#M000086">send_chmod</a>&nbsp;&nbsp;
+      <a href="#M000089">send_chown</a>&nbsp;&nbsp;
+      <a href="#M000065">send_close</a>&nbsp;&nbsp;
+      <a href="#M000047">send_create</a>&nbsp;&nbsp;
+      <a href="#M000050">send_createFile</a>&nbsp;&nbsp;
+      <a href="#M000077">send_exists</a>&nbsp;&nbsp;
+      <a href="#M000095">send_getFileBlockLocations</a>&nbsp;&nbsp;
+      <a href="#M000083">send_listStatus</a>&nbsp;&nbsp;
+      <a href="#M000074">send_mkdirs</a>&nbsp;&nbsp;
+      <a href="#M000053">send_open</a>&nbsp;&nbsp;
+      <a href="#M000062">send_read</a>&nbsp;&nbsp;
+      <a href="#M000071">send_rename</a>&nbsp;&nbsp;
+      <a href="#M000068">send_rm</a>&nbsp;&nbsp;
+      <a href="#M000041">send_setInactivityTimeoutPeriod</a>&nbsp;&nbsp;
+      <a href="#M000092">send_setReplication</a>&nbsp;&nbsp;
+      <a href="#M000044">send_shutdown</a>&nbsp;&nbsp;
+      <a href="#M000080">send_stat</a>&nbsp;&nbsp;
+      <a href="#M000059">send_write</a>&nbsp;&nbsp;
+      <a href="#M000040">setInactivityTimeoutPeriod</a>&nbsp;&nbsp;
+      <a href="#M000091">setReplication</a>&nbsp;&nbsp;
+      <a href="#M000043">shutdown</a>&nbsp;&nbsp;
+      <a href="#M000079">stat</a>&nbsp;&nbsp;
+      <a href="#M000058">write</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name">::Thrift::Client</span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000055" class="method-detail">
+        <a name="M000055"></a>
+
+        <div class="method-heading">
+          <a href="#M000055" class="method-signature">
+          <span class="method-name">append</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000055-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000055-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 90</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">append</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_append</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_append</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000085" class="method-detail">
+        <a name="M000085"></a>
+
+        <div class="method-heading">
+          <a href="#M000085" class="method-signature">
+          <span class="method-name">chmod</span><span class="method-args">(path, mode)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000085-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000085-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 250</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chmod</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">mode</span>)
+      <span class="ruby-identifier">send_chmod</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">mode</span>)
+      <span class="ruby-identifier">recv_chmod</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000088" class="method-detail">
+        <a name="M000088"></a>
+
+        <div class="method-heading">
+          <a href="#M000088" class="method-signature">
+          <span class="method-name">chown</span><span class="method-args">(path, owner, group)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000088-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000088-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 265</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chown</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">owner</span>, <span class="ruby-identifier">group</span>)
+      <span class="ruby-identifier">send_chown</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">owner</span>, <span class="ruby-identifier">group</span>)
+      <span class="ruby-identifier">recv_chown</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000064" class="method-detail">
+        <a name="M000064"></a>
+
+        <div class="method-heading">
+          <a href="#M000064" class="method-signature">
+          <span class="method-name">close</span><span class="method-args">(out)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000064-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000064-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 138</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>(<span class="ruby-identifier">out</span>)
+      <span class="ruby-identifier">send_close</span>(<span class="ruby-identifier">out</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_close</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000046" class="method-detail">
+        <a name="M000046"></a>
+
+        <div class="method-heading">
+          <a href="#M000046" class="method-signature">
+          <span class="method-name">create</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000046-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000046-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 42</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_create</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_create</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000049" class="method-detail">
+        <a name="M000049"></a>
+
+        <div class="method-heading">
+          <a href="#M000049" class="method-signature">
+          <span class="method-name">createFile</span><span class="method-args">(path, mode, overwrite, bufferSize, block_replication, blocksize)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000049-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000049-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 58</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">createFile</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">mode</span>, <span class="ruby-identifier">overwrite</span>, <span class="ruby-identifier">bufferSize</span>, <span class="ruby-identifier">block_replication</span>, <span class="ruby-identifier">blocksize</span>)
+      <span class="ruby-identifier">send_createFile</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">mode</span>, <span class="ruby-identifier">overwrite</span>, <span class="ruby-identifier">bufferSize</span>, <span class="ruby-identifier">block_replication</span>, <span class="ruby-identifier">blocksize</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_createFile</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000076" class="method-detail">
+        <a name="M000076"></a>
+
+        <div class="method-heading">
+          <a href="#M000076" class="method-signature">
+          <span class="method-name">exists</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000076-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000076-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 202</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exists</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_exists</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_exists</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000094" class="method-detail">
+        <a name="M000094"></a>
+
+        <div class="method-heading">
+          <a href="#M000094" class="method-signature">
+          <span class="method-name">getFileBlockLocations</span><span class="method-args">(path, start, length)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000094-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000094-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 295</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getFileBlockLocations</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">start</span>, <span class="ruby-identifier">length</span>)
+      <span class="ruby-identifier">send_getFileBlockLocations</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">start</span>, <span class="ruby-identifier">length</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_getFileBlockLocations</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000082" class="method-detail">
+        <a name="M000082"></a>
+
+        <div class="method-heading">
+          <a href="#M000082" class="method-signature">
+          <span class="method-name">listStatus</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000082-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000082-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 234</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">listStatus</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_listStatus</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_listStatus</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000073" class="method-detail">
+        <a name="M000073"></a>
+
+        <div class="method-heading">
+          <a href="#M000073" class="method-signature">
+          <span class="method-name">mkdirs</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000073-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000073-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 186</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mkdirs</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_mkdirs</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_mkdirs</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000052" class="method-detail">
+        <a name="M000052"></a>
+
+        <div class="method-heading">
+          <a href="#M000052" class="method-signature">
+          <span class="method-name">open</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000052-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000052-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 74</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_open</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_open</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000061" class="method-detail">
+        <a name="M000061"></a>
+
+        <div class="method-heading">
+          <a href="#M000061" class="method-signature">
+          <span class="method-name">read</span><span class="method-args">(handle, offset, size)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000061-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000061-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 122</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">size</span>)
+      <span class="ruby-identifier">send_read</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">size</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_read</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000057" class="method-detail">
+        <a name="M000057"></a>
+
+        <div class="method-heading">
+          <a href="#M000057" class="method-signature">
+          <span class="method-name">recv_append</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000057-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000057-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 99</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_append</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Append_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'append failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000087" class="method-detail">
+        <a name="M000087"></a>
+
+        <div class="method-heading">
+          <a href="#M000087" class="method-signature">
+          <span class="method-name">recv_chmod</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000087-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000087-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 259</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_chmod</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Chmod_result</span>)
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword kw">return</span>
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000090" class="method-detail">
+        <a name="M000090"></a>
+
+        <div class="method-heading">
+          <a href="#M000090" class="method-signature">
+          <span class="method-name">recv_chown</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000090-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000090-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 274</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_chown</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Chown_result</span>)
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword kw">return</span>
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000066" class="method-detail">
+        <a name="M000066"></a>
+
+        <div class="method-heading">
+          <a href="#M000066" class="method-signature">
+          <span class="method-name">recv_close</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000066-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000066-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 147</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_close</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Close_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'close failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000048" class="method-detail">
+        <a name="M000048"></a>
+
+        <div class="method-heading">
+          <a href="#M000048" class="method-signature">
+          <span class="method-name">recv_create</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000048-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000048-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 51</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_create</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Create_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'create failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000051" class="method-detail">
+        <a name="M000051"></a>
+
+        <div class="method-heading">
+          <a href="#M000051" class="method-signature">
+          <span class="method-name">recv_createFile</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000051-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000051-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 67</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_createFile</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">CreateFile_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'createFile failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000078" class="method-detail">
+        <a name="M000078"></a>
+
+        <div class="method-heading">
+          <a href="#M000078" class="method-signature">
+          <span class="method-name">recv_exists</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000078-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000078-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 211</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_exists</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Exists_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'exists failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000096" class="method-detail">
+        <a name="M000096"></a>
+
+        <div class="method-heading">
+          <a href="#M000096" class="method-signature">
+          <span class="method-name">recv_getFileBlockLocations</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000096-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000096-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 304</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_getFileBlockLocations</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">GetFileBlockLocations_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'getFileBlockLocations failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000084" class="method-detail">
+        <a name="M000084"></a>
+
+        <div class="method-heading">
+          <a href="#M000084" class="method-signature">
+          <span class="method-name">recv_listStatus</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000084-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000084-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 243</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_listStatus</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">ListStatus_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'listStatus failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000075" class="method-detail">
+        <a name="M000075"></a>
+
+        <div class="method-heading">
+          <a href="#M000075" class="method-signature">
+          <span class="method-name">recv_mkdirs</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000075-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000075-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 195</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_mkdirs</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Mkdirs_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'mkdirs failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000054" class="method-detail">
+        <a name="M000054"></a>
+
+        <div class="method-heading">
+          <a href="#M000054" class="method-signature">
+          <span class="method-name">recv_open</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000054-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000054-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 83</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_open</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Open_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'open failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000063" class="method-detail">
+        <a name="M000063"></a>
+
+        <div class="method-heading">
+          <a href="#M000063" class="method-signature">
+          <span class="method-name">recv_read</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000063-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000063-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 131</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_read</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Read_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'read failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000072" class="method-detail">
+        <a name="M000072"></a>
+
+        <div class="method-heading">
+          <a href="#M000072" class="method-signature">
+          <span class="method-name">recv_rename</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000072-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000072-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 179</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_rename</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Rename_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'rename failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000069" class="method-detail">
+        <a name="M000069"></a>
+
+        <div class="method-heading">
+          <a href="#M000069" class="method-signature">
+          <span class="method-name">recv_rm</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000069-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000069-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 163</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_rm</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Rm_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'rm failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000042" class="method-detail">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+          <a href="#M000042" class="method-signature">
+          <span class="method-name">recv_setInactivityTimeoutPeriod</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000042-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000042-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 23</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_setInactivityTimeoutPeriod</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">SetInactivityTimeoutPeriod_result</span>)
+      <span class="ruby-keyword kw">return</span>
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000093" class="method-detail">
+        <a name="M000093"></a>
+
+        <div class="method-heading">
+          <a href="#M000093" class="method-signature">
+          <span class="method-name">recv_setReplication</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000093-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000093-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 289</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_setReplication</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">SetReplication_result</span>)
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword kw">return</span>
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000045" class="method-detail">
+        <a name="M000045"></a>
+
+        <div class="method-heading">
+          <a href="#M000045" class="method-signature">
+          <span class="method-name">recv_shutdown</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000045-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000045-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 37</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_shutdown</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Shutdown_result</span>)
+      <span class="ruby-keyword kw">return</span>
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000081" class="method-detail">
+        <a name="M000081"></a>
+
+        <div class="method-heading">
+          <a href="#M000081" class="method-signature">
+          <span class="method-name">recv_stat</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000081-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000081-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 227</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_stat</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Stat_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'stat failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000060" class="method-detail">
+        <a name="M000060"></a>
+
+        <div class="method-heading">
+          <a href="#M000060" class="method-signature">
+          <span class="method-name">recv_write</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000060-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000060-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 115</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recv_write</span>()
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">receive_message</span>(<span class="ruby-constant">Write_result</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">success</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">ouch</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationException</span><span class="ruby-operator">::</span><span class="ruby-constant">MISSING_RESULT</span>, <span class="ruby-value str">'write failed: unknown result'</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000070" class="method-detail">
+        <a name="M000070"></a>
+
+        <div class="method-heading">
+          <a href="#M000070" class="method-signature">
+          <span class="method-name">rename</span><span class="method-args">(path, dest)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000070-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000070-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 170</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rename</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">dest</span>)
+      <span class="ruby-identifier">send_rename</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">dest</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_rename</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000067" class="method-detail">
+        <a name="M000067"></a>
+
+        <div class="method-heading">
+          <a href="#M000067" class="method-signature">
+          <span class="method-name">rm</span><span class="method-args">(path, recursive)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000067-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000067-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 154</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rm</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">recursive</span>)
+      <span class="ruby-identifier">send_rm</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">recursive</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_rm</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000056" class="method-detail">
+        <a name="M000056"></a>
+
+        <div class="method-heading">
+          <a href="#M000056" class="method-signature">
+          <span class="method-name">send_append</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000056-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000056-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 95</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_append</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'append'</span>, <span class="ruby-constant">Append_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000086" class="method-detail">
+        <a name="M000086"></a>
+
+        <div class="method-heading">
+          <a href="#M000086" class="method-signature">
+          <span class="method-name">send_chmod</span><span class="method-args">(path, mode)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000086-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000086-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 255</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_chmod</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">mode</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'chmod'</span>, <span class="ruby-constant">Chmod_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">:mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">mode</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000089" class="method-detail">
+        <a name="M000089"></a>
+
+        <div class="method-heading">
+          <a href="#M000089" class="method-signature">
+          <span class="method-name">send_chown</span><span class="method-args">(path, owner, group)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000089-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000089-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 270</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_chown</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">owner</span>, <span class="ruby-identifier">group</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'chown'</span>, <span class="ruby-constant">Chown_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">:owner</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">owner</span>, <span class="ruby-identifier">:group</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">group</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000065" class="method-detail">
+        <a name="M000065"></a>
+
+        <div class="method-heading">
+          <a href="#M000065" class="method-signature">
+          <span class="method-name">send_close</span><span class="method-args">(out)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000065-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000065-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 143</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_close</span>(<span class="ruby-identifier">out</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'close'</span>, <span class="ruby-constant">Close_args</span>, <span class="ruby-identifier">:out</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">out</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000047" class="method-detail">
+        <a name="M000047"></a>
+
+        <div class="method-heading">
+          <a href="#M000047" class="method-signature">
+          <span class="method-name">send_create</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000047-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000047-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 47</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_create</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'create'</span>, <span class="ruby-constant">Create_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000050" class="method-detail">
+        <a name="M000050"></a>
+
+        <div class="method-heading">
+          <a href="#M000050" class="method-signature">
+          <span class="method-name">send_createFile</span><span class="method-args">(path, mode, overwrite, bufferSize, block_replication, blocksize)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000050-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000050-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 63</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_createFile</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">mode</span>, <span class="ruby-identifier">overwrite</span>, <span class="ruby-identifier">bufferSize</span>, <span class="ruby-identifier">block_replication</span>, <span class="ruby-identifier">blocksize</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'createFile'</span>, <span class="ruby-constant">CreateFile_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">:mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">mode</span>, <span class="ruby-identifier">:overwrite</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">overwrite</span>, <span class="ruby-identifier">:bufferSize</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">bufferSize</span>, <span class="ruby-identifier">:block_replication</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">block_replication</span>, <span class="ruby-identifier">:blocksize</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">blocksize</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000077" class="method-detail">
+        <a name="M000077"></a>
+
+        <div class="method-heading">
+          <a href="#M000077" class="method-signature">
+          <span class="method-name">send_exists</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000077-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000077-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 207</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_exists</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'exists'</span>, <span class="ruby-constant">Exists_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000095" class="method-detail">
+        <a name="M000095"></a>
+
+        <div class="method-heading">
+          <a href="#M000095" class="method-signature">
+          <span class="method-name">send_getFileBlockLocations</span><span class="method-args">(path, start, length)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000095-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000095-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 300</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_getFileBlockLocations</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">start</span>, <span class="ruby-identifier">length</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'getFileBlockLocations'</span>, <span class="ruby-constant">GetFileBlockLocations_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">:start</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">start</span>, <span class="ruby-identifier">:length</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">length</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000083" class="method-detail">
+        <a name="M000083"></a>
+
+        <div class="method-heading">
+          <a href="#M000083" class="method-signature">
+          <span class="method-name">send_listStatus</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000083-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000083-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 239</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_listStatus</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'listStatus'</span>, <span class="ruby-constant">ListStatus_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000074" class="method-detail">
+        <a name="M000074"></a>
+
+        <div class="method-heading">
+          <a href="#M000074" class="method-signature">
+          <span class="method-name">send_mkdirs</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000074-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000074-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 191</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_mkdirs</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'mkdirs'</span>, <span class="ruby-constant">Mkdirs_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000053" class="method-detail">
+        <a name="M000053"></a>
+
+        <div class="method-heading">
+          <a href="#M000053" class="method-signature">
+          <span class="method-name">send_open</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000053-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000053-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 79</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_open</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'open'</span>, <span class="ruby-constant">Open_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000062" class="method-detail">
+        <a name="M000062"></a>
+
+        <div class="method-heading">
+          <a href="#M000062" class="method-signature">
+          <span class="method-name">send_read</span><span class="method-args">(handle, offset, size)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000062-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000062-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 127</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_read</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">size</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'read'</span>, <span class="ruby-constant">Read_args</span>, <span class="ruby-identifier">:handle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">handle</span>, <span class="ruby-identifier">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">:size</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">size</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000071" class="method-detail">
+        <a name="M000071"></a>
+
+        <div class="method-heading">
+          <a href="#M000071" class="method-signature">
+          <span class="method-name">send_rename</span><span class="method-args">(path, dest)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000071-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000071-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 175</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_rename</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">dest</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'rename'</span>, <span class="ruby-constant">Rename_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">:dest</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dest</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000068" class="method-detail">
+        <a name="M000068"></a>
+
+        <div class="method-heading">
+          <a href="#M000068" class="method-signature">
+          <span class="method-name">send_rm</span><span class="method-args">(path, recursive)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000068-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000068-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 159</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_rm</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">recursive</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'rm'</span>, <span class="ruby-constant">Rm_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">:recursive</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">recursive</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000041" class="method-detail">
+        <a name="M000041"></a>
+
+        <div class="method-heading">
+          <a href="#M000041" class="method-signature">
+          <span class="method-name">send_setInactivityTimeoutPeriod</span><span class="method-args">(periodInSeconds)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000041-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000041-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 19</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_setInactivityTimeoutPeriod</span>(<span class="ruby-identifier">periodInSeconds</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'setInactivityTimeoutPeriod'</span>, <span class="ruby-constant">SetInactivityTimeoutPeriod_args</span>, <span class="ruby-identifier">:periodInSeconds</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">periodInSeconds</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000092" class="method-detail">
+        <a name="M000092"></a>
+
+        <div class="method-heading">
+          <a href="#M000092" class="method-signature">
+          <span class="method-name">send_setReplication</span><span class="method-args">(path, replication)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000092-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000092-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 285</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_setReplication</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">replication</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'setReplication'</span>, <span class="ruby-constant">SetReplication_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">:replication</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">replication</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000044" class="method-detail">
+        <a name="M000044"></a>
+
+        <div class="method-heading">
+          <a href="#M000044" class="method-signature">
+          <span class="method-name">send_shutdown</span><span class="method-args">(status)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000044-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000044-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 33</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_shutdown</span>(<span class="ruby-identifier">status</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'shutdown'</span>, <span class="ruby-constant">Shutdown_args</span>, <span class="ruby-identifier">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">status</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000080" class="method-detail">
+        <a name="M000080"></a>
+
+        <div class="method-heading">
+          <a href="#M000080" class="method-signature">
+          <span class="method-name">send_stat</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000080-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000080-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 223</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_stat</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'stat'</span>, <span class="ruby-constant">Stat_args</span>, <span class="ruby-identifier">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000059" class="method-detail">
+        <a name="M000059"></a>
+
+        <div class="method-heading">
+          <a href="#M000059" class="method-signature">
+          <span class="method-name">send_write</span><span class="method-args">(handle, data)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000059-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000059-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 111</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_write</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">data</span>)
+      <span class="ruby-identifier">send_message</span>(<span class="ruby-value str">'write'</span>, <span class="ruby-constant">Write_args</span>, <span class="ruby-identifier">:handle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">handle</span>, <span class="ruby-identifier">:data</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">data</span>)
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000040" class="method-detail">
+        <a name="M000040"></a>
+
+        <div class="method-heading">
+          <a href="#M000040" class="method-signature">
+          <span class="method-name">setInactivityTimeoutPeriod</span><span class="method-args">(periodInSeconds)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000040-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000040-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 14</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setInactivityTimeoutPeriod</span>(<span class="ruby-identifier">periodInSeconds</span>)
+      <span class="ruby-identifier">send_setInactivityTimeoutPeriod</span>(<span class="ruby-identifier">periodInSeconds</span>)
+      <span class="ruby-identifier">recv_setInactivityTimeoutPeriod</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000091" class="method-detail">
+        <a name="M000091"></a>
+
+        <div class="method-heading">
+          <a href="#M000091" class="method-signature">
+          <span class="method-name">setReplication</span><span class="method-args">(path, replication)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000091-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000091-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 280</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setReplication</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">replication</span>)
+      <span class="ruby-identifier">send_setReplication</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">replication</span>)
+      <span class="ruby-identifier">recv_setReplication</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000043" class="method-detail">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+          <a href="#M000043" class="method-signature">
+          <span class="method-name">shutdown</span><span class="method-args">(status)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000043-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000043-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 28</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shutdown</span>(<span class="ruby-identifier">status</span>)
+      <span class="ruby-identifier">send_shutdown</span>(<span class="ruby-identifier">status</span>)
+      <span class="ruby-identifier">recv_shutdown</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000079" class="method-detail">
+        <a name="M000079"></a>
+
+        <div class="method-heading">
+          <a href="#M000079" class="method-signature">
+          <span class="method-name">stat</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000079-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000079-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 218</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stat</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">send_stat</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_stat</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000058" class="method-detail">
+        <a name="M000058"></a>
+
+        <div class="method-heading">
+          <a href="#M000058" class="method-signature">
+          <span class="method-name">write</span><span class="method-args">(handle, data)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000058-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000058-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/thrift/thrift_hadoop_file_system.rb, line 106</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">data</span>)
+      <span class="ruby-identifier">send_write</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">data</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">recv_write</span>()
+    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
