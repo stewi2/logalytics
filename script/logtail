@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require "rubygems"
+require "filewatch/tail"
+require "logger"
+require "date"
+
+logdir = ARGV[0]
+type = ARGV[1]
+category = ARGV[2]
+
+logger = Logger.new(STDERR)
+logger.level = Logger::DEBUG
+t = FileWatch::Tail.new({:logger=>logger})
+
+t.tail("#{logdir}/#{type}*.log")
+t.subscribe do |path, line|
+  begin 
+    datestr = line.match(/\[(.+)\]/)[1]
+    ts = DateTime.strptime(datestr,'%d/%b/%Y:%H:%M:%S %z').to_time.to_i
+    puts "timestamp=#{ts},category=#{category}\x01#{line}"
+  rescue Exception => e
+    logger.warn "Error parsing line #{line} - #{e}"
+  end
+end
