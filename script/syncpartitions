@@ -3,12 +3,12 @@
 require 'rubygems'
 require 'httpclient'
 require 'json'
-require 'rbhive'
 require 'date'
+require 'java'
 
 client = HTTPClient.new()
 client.send_timeout=0
-client.receive_timeout=0 
+client.receive_timeout=0
 
 options = {}
 options[:host] = 'hadoop1nn1'
@@ -26,7 +26,7 @@ def resolve(path,options)
   resp = JSON.parse(options[:client].get("http://#{options[:host]}:#{options[:port]}/webhdfs/v1/logdata/#{path}", :query=>{'user.name'=>options[:user], :op=>'LISTSTATUS'}).body)
 
   resp['FileStatuses']['FileStatus'].each do |status|
-    name = status['pathSuffix']  
+    name = status['pathSuffix']
     if status['type']=='DIRECTORY' && name=~/.+=.+/ then
       key,value = name.split('=')
       subparts = resolve("#{path}/#{name}",options)
@@ -36,35 +36,54 @@ def resolve(path,options)
         partitions<<{key=>value}
       end
     end
-  end 
+  end
 
   return partitions || [{}]
 end
 
 hive_partitions = []
-RBHive.connect(options[:host],10000) do |db|
 
-  db.fetch(%[
-    SHOW PARTITIONS #{table}
-  ]).each do |p|
-    partition = {}
-    parts = p[:partition].split("/")
-    parts.each {|part| key,value = part.split("="); partition[key]=value}
-    hive_partitions << partition
-  end
-  
-  hdfs_partitions = resolve(table,options)
-  missing = hdfs_partitions-hive_partitions
-  
-  puts "Adding #{missing.size} missing partitions to Hive"
-  
-  missing.each do |partition|
-#    if partition['dt'].nil? or partition['dt']==Date.today.strftime('%Y%m%d')
-#      puts "Skipping partiton for today: #{partition.inspect}"
-#      next
-#    end
-    db.execute %[
-      ALTER TABLE #{table} ADD PARTITION (#{partition.map {|k,v| k+'=\''+v+'\''}.join(',')})
-    ]
+url = "jdbc:hive2://#{options[:host]}:10000/default"
+user = 'hive'
+password = 'hive'
+
+dirs = [ "../lib/hive/" ]
+dirs.each do |dir|
+  Dir.foreach(dir) do |f|
+    next unless f =~ /(?<jar>.+.jar$)/
+    require File.join(dir,f)
   end
 end
+
+java_import java.sql.DriverManager
+DriverManager.register_driver(org.apache.hive.jdbc.HiveDriver.new)
+
+conn = DriverManager.get_connection(url, user, password)
+stmt = conn.create_statement if conn
+query = "SHOW PARTITIONS #{table}"
+rs = stmt.execute_query(query) if stmt
+
+hive_partitions = []
+
+while rs && rs.next do
+  p = rs.get_string(1)
+  partition = {}
+  parts = p.split("/")
+  parts.each {|part| key,value = part.split("="); partition[key]=value}
+  hive_partitions << partition
+end
+
+hdfs_partitions = resolve(table,options)
+missing = hdfs_partitions-hive_partitions
+
+puts "Adding #{missing.size} missing partitions to Hive"
+
+missing.each do |partition|
+  stmt.execute_update("ALTER TABLE #{table} ADD PARTITION (#{partition.map {|k,v| k+'=\''+v+'\''}.join(',')})")
+end
+
+rs.close if rs
+stmt.close if stmt
+stmt = nil
+conn.close if conn
+conn = nil
