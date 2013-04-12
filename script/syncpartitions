@@ -4,13 +4,14 @@ require 'rubygems'
 require 'httpclient'
 require 'json'
 require 'rbhive'
+require 'date'
 
 client = HTTPClient.new()
 client.send_timeout=0
 client.receive_timeout=0 
 
 options = {}
-options[:host] = 'dev-hadoop01'
+options[:host] = 'hadoop1nn1'
 options[:port] = 14000
 options[:user] = 'flume'
 options[:client] = client
@@ -22,7 +23,7 @@ def resolve(path,options)
   puts "Resolving #{path}"
   partitions = []
 
-  resp = JSON.parse(options[:client].get("http://#{options[:host]}:#{options[:port]}/webhdfs/v1/flume/#{path}", :query=>{'user.name'=>options[:user], :op=>'LISTSTATUS'}).body)
+  resp = JSON.parse(options[:client].get("http://#{options[:host]}:#{options[:port]}/webhdfs/v1/logdata/#{path}", :query=>{'user.name'=>options[:user], :op=>'LISTSTATUS'}).body)
 
   resp['FileStatuses']['FileStatus'].each do |status|
     name = status['pathSuffix']  
@@ -41,7 +42,7 @@ def resolve(path,options)
 end
 
 hive_partitions = []
-RBHive.connect('dev-hadoop01',10000) do |db|
+RBHive.connect(options[:host],10000) do |db|
 
   db.fetch(%[
     SHOW PARTITIONS #{table}
@@ -58,6 +59,10 @@ RBHive.connect('dev-hadoop01',10000) do |db|
   puts "Adding #{missing.size} missing partitions to Hive"
   
   missing.each do |partition|
+#    if partition['dt'].nil? or partition['dt']==Date.today.strftime('%Y%m%d')
+#      puts "Skipping partiton for today: #{partition.inspect}"
+#      next
+#    end
     db.execute %[
       ALTER TABLE #{table} ADD PARTITION (#{partition.map {|k,v| k+'=\''+v+'\''}.join(',')})
     ]
