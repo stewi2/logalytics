@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env jruby
 
 require 'rubygems'
 require 'httpclient'
@@ -47,7 +47,7 @@ url = "jdbc:hive2://#{options[:host]}:10000/default"
 user = 'hive'
 password = 'hive'
 
-dirs = [ "../lib/hive/" ]
+dirs = [ "lib/hive/" ]
 dirs.each do |dir|
   Dir.foreach(dir) do |f|
     next unless f =~ /(?<jar>.+.jar$)/
