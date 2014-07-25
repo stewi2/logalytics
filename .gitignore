@@ -3,6 +3,7 @@
 .bundle
 .config
 coverage
+config/hive.yml
 InstalledFiles
 lib/bundler/man
 pkg

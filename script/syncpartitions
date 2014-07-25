@@ -1,88 +1,31 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'httpclient'
 require 'json'
 require 'date'
 require 'java'
+require 'yaml'
 
-client = HTTPClient.new()
-client.send_timeout=0
-client.receive_timeout=0
+config = YAML.load_file(File.expand_path('./config/hive.yml'))['hive']
 
-options = {}
-options[:host] = 'hadoop1nn1'
-options[:port] = 14000
-options[:user] = 'flume'
-options[:client] = client
+url = "jdbc:hive2://#{config['host']}:#{config[:'port']}/#{config['database']}"
 
-table = ARGV[0]
-
-def resolve(path,options)
-
-  puts "Resolving #{path}"
-  partitions = []
-
-  resp = JSON.parse(options[:client].get("http://#{options[:host]}:#{options[:port]}/webhdfs/v1/logdata/#{path}", :query=>{'user.name'=>options[:user], :op=>'LISTSTATUS'}).body)
-
-  resp['FileStatuses']['FileStatus'].each do |status|
-    name = status['pathSuffix']
-    if status['type']=='DIRECTORY' && name=~/.+=.+/ then
-      key,value = name.split('=')
-      subparts = resolve("#{path}/#{name}",options)
-      if !subparts.empty? then
-        subparts.each {|part| partitions << {key=>value}.merge(part)}
-      else
-        partitions<<{key=>value}
-      end
-    end
-  end
-
-  return partitions || [{}]
-end
-
-hive_partitions = []
-
-url = "jdbc:hive2://#{options[:host]}:10000/default"
-user = 'hive'
-password = 'hive'
-
-dirs = [ "../lib/hive/" ]
-dirs.each do |dir|
-  Dir.foreach(dir) do |f|
-    next unless f =~ /(?<jar>.+.jar$)/
-    require File.join(dir,f)
-  end
-end
+Dir['./lib/hive/**/*.jar'].each { |f| require File.join(f) }
 
 java_import java.sql.DriverManager
 DriverManager.register_driver(org.apache.hive.jdbc.HiveDriver.new)
 
-conn = DriverManager.get_connection(url, user, password)
+conn = DriverManager.get_connection(url, config['username'], config['password'])
 stmt = conn.create_statement if conn
-query = "SHOW PARTITIONS #{table}"
-rs = stmt.execute_query(query) if stmt
 
-hive_partitions = []
+puts "Adding missing partitions to Hive"
 
-while rs && rs.next do
-  p = rs.get_string(1)
-  partition = {}
-  parts = p.split("/")
-  parts.each {|part| key,value = part.split("="); partition[key]=value}
-  hive_partitions << partition
+config['tables'].each do |table_name|
+  query = "MSCK REPAIR TABLE #{table_name}"
+  puts query
+  stmt.execute_update(query)
 end
 
-hdfs_partitions = resolve(table,options)
-missing = hdfs_partitions-hive_partitions
-
-puts "Adding #{missing.size} missing partitions to Hive"
-
-missing.each do |partition|
-  stmt.execute_update("ALTER TABLE #{table} ADD PARTITION (#{partition.map {|k,v| k+'=\''+v+'\''}.join(',')})")
-end
-
-rs.close if rs
 stmt.close if stmt
 stmt = nil
 conn.close if conn

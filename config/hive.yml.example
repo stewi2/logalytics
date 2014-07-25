@@ -1,0 +1,8 @@
+hive:
+  username: username
+  password: password
+  host: localhost
+  port: 10000
+  database: default
+  tables:
+    - tablename
